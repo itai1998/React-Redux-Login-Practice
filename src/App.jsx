@@ -3,6 +3,8 @@ import { Provider } from 'react-redux'
 import './App.css'
 import { Profile } from './Profile'
 import userSlice from './store/userSlice'
+import Counter from './Counter'
+import { counterStore } from './store/counterSlice'
 
 //store
 
@@ -15,11 +17,15 @@ const store = configureStore({
 
 function App() {
   return (
-    <Provider store={store}>
-      <div>
+    <div>
+      <Provider store={store}>
         <Profile />
-      </div>
-    </Provider>
+      </Provider>
+      <hr />
+      <Provider store={counterStore}>
+        <Counter />
+      </Provider>
+    </div>
   )
 }
 
