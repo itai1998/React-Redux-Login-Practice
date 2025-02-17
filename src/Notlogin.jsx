@@ -42,7 +42,9 @@ const Notlogin = () => {
         id="email"
         ref={emailRef}
       />
-      <button onClick={handleLogin}>Login</button>
+      <div>
+        <button onClick={handleLogin} style={{marginTop: "10px"}}>Login</button>
+      </div>
     </div>
   )
 }
