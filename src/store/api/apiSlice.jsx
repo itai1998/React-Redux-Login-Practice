@@ -1,6 +1,6 @@
 // https://jsonplaceholder.typicode.com/posts
 
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query'
+import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 
 export const postsApi = createApi({
   reducerPath: 'postsApi',

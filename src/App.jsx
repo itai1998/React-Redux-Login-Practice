@@ -5,6 +5,9 @@ import { Profile } from './Profile'
 import userSlice from './store/userSlice'
 import Counter from './Counter'
 import { counterStore } from './store/counterSlice'
+import { ApiProvider } from '@reduxjs/toolkit/query/react'
+import { postsApi } from './store/api/apiSlice'
+import Post from './rtk-query/post'
 
 //store
 
@@ -25,6 +28,10 @@ function App() {
       <Provider store={counterStore}>
         <Counter />
       </Provider>
+      <hr />
+      <ApiProvider api={postsApi}>
+        <Post />
+      </ApiProvider>
     </div>
   )
 }
